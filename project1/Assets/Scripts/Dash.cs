@@ -51,7 +51,7 @@ public class Dash : MonoBehaviour
 
         if (direction == 0)
         {
-            if ()
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 if (moveInput < 0)
                 {
