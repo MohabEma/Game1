@@ -9,6 +9,8 @@ namespace Mohab
         public float X;
         public bool JumpDown;
         public bool JumpUp;
+        public bool Sprint;
+        public bool LeaveSprint;
     }
 
     public interface IPlayerController

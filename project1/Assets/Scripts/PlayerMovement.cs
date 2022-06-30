@@ -28,9 +28,19 @@ namespace Mohab
 
         void Update()
         {
-           
-        
-            
+
+            if (Input.Sprint)
+            {
+                _moveClamp = 17;
+            }
+            else if (Input.LeaveSprint)
+            {
+                _moveClamp = 10;
+            }
+
+
+
+
             if (!_active) return;
             // Calculate velocity
             Velocity = (transform.position - _lastPosition) / Time.deltaTime;
@@ -56,7 +66,9 @@ namespace Mohab
             {
                 JumpDown = UnityEngine.Input.GetButtonDown("Jump"),
                 JumpUp = UnityEngine.Input.GetButtonUp("Jump"),
-                X = UnityEngine.Input.GetAxisRaw("Horizontal")
+                X = UnityEngine.Input.GetAxisRaw("Horizontal"),
+                Sprint = UnityEngine.Input.GetKeyDown(KeyCode.LeftShift),
+                 LeaveSprint = UnityEngine.Input.GetKeyUp(KeyCode.LeftShift)
             };
             if (Input.JumpDown)
             {
@@ -163,12 +175,15 @@ namespace Mohab
         #region Walk
 
         [Header("WALKING")] [SerializeField] private float _acceleration = 90;
-        [SerializeField] private float _moveClamp = 13;
+        [SerializeField] private float _moveClamp = 10;
         [SerializeField] private float _deAcceleration = 60f;
         [SerializeField] private float _apexBonus = 2;
 
         private void CalculateWalk()
         {
+
+           
+
             if (Input.X != 0)
             {
                 // Set horizontal move speed
@@ -293,6 +308,17 @@ namespace Mohab
         // We cast our bounds before moving to avoid future collisions
         private void MoveCharacter()
         {
+            if (Input.Sprint == true)
+            {
+                _moveClamp = 17;
+            }
+
+
+           
+
+
+
+
             var pos = transform.position + _characterBounds.center;
             RawMovement = new Vector3(_currentHorizontalSpeed, _currentVerticalSpeed); // Used externally
             var move = RawMovement * Time.deltaTime;
