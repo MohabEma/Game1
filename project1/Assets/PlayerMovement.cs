@@ -26,9 +26,9 @@ namespace Mohab
         void Awake() => Invoke(nameof(Activate), 0.5f);
         void Activate() => _active = true;
 
-        private void Update()
+        void Update()
         {
-
+           
         
             
             if (!_active) return;
