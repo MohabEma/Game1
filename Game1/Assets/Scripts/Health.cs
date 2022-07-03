@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    private Rigidbody2D rb;
     public int health;
     public int numOfHearts;
     public Animator animator;
@@ -13,13 +15,20 @@ public class Health : MonoBehaviour
     public Sprite emptyHeart;
 
     [SerializeField] private Transform Player;
-    [SerializeField] private Transform RespawnPoint;
 
+
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     public void Update()
     {
         if(health == 0)
         {
             StartCoroutine(Deathe());
+
+        
         }
 
         if (Input.GetKeyDown(KeyCode.K))
@@ -54,14 +63,15 @@ public class Health : MonoBehaviour
 
     IEnumerator Deathe()
     {
-
+        rb.isKinematic = true;
         animator.SetBool("Death", true);
         
         yield return new WaitForSeconds(0.7f);
-
+        rb.isKinematic = false;
         health = health + 3;
-        Player.transform.position = RespawnPoint.transform.position;
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
 
         animator.SetBool("Death", false);
 

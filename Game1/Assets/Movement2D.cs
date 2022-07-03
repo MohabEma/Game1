@@ -2,12 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//////////SETUP INSTRUCTIONS//////////
-//Attach this script a RigidBody2D to the player GameObject
-//Set Body type to Dynamic, Collision detection to continuous and Freeze Z rotation
-//Add a 2D Collider (Any will do, but 2D box collider)
-//Define the ground and wall mask layers (In the script and in the GameObjects)
-//Adjust and play around with the other variables (Some require you to activate gizmos in order to visualize)
+
 
 public class Movement2D : MonoBehaviour
 {
@@ -99,7 +94,7 @@ public class Movement2D : MonoBehaviour
         _verticalDirection = GetInput().y;
         if (Input.GetButtonDown("Jump")) _jumpBufferCounter = _jumpBufferLength;
         else _jumpBufferCounter -= Time.deltaTime;
-        if (Input.GetButtonDown("Dash")) _dashBufferCounter = _dashBufferLength;
+        if (Input.GetKeyDown(KeyCode.F)) _dashBufferCounter = _dashBufferLength;
         else _dashBufferCounter -= Time.deltaTime;
         Animation();
     }
