@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Video;
+using UnityEngine.SceneManagement;
+
+public class WarningOpen : MonoBehaviour
+{
+    VideoPlayer video;
+    public string menuScene;
+
+    void Awake()
+    {
+        video = GetComponent<VideoPlayer>();
+        video.Play();
+        video.loopPointReached += CheckOver;
+        Cursor.visible = false;
+    }
+
+
+    void CheckOver(UnityEngine.Video.VideoPlayer vp)
+    {
+        SceneManager.LoadScene(menuScene);
+    }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Submit"))
+        {
+            SceneManager.LoadScene(menuScene);
+        }
+    }
+}
