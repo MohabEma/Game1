@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 2913930137839794688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2, y: 0.5, z: 10}
-  m_LocalScale: {x: 0.34497592, y: 0.34497592, z: 0.34497592}
+  m_LocalScale: {x: 0.26264742, y: 0.26264742, z: 0.26264742}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2913930138766484216}
@@ -294,8 +294,8 @@ MonoBehaviour:
   _cornerCorrectLayer:
     serializedVersion: 2
     m_Bits: 0
-  _movementAcceleration: 50
-  _maxMoveSpeed: 12
+  _movementAcceleration: 26
+  _maxMoveSpeed: 5
   _groundLinearDrag: 7
   _jumpForce: 18
   _airLinearDrag: 2.5
@@ -794,8 +794,8 @@ MonoBehaviour:
   m_rigidbody: {fileID: 2913930137839794701}
   rotateOverTime: 1
   rotationSpeed: 14.5
-  hasMaxDistance: 0
-  maxDistnace: 9
+  hasMaxDistance: 1
+  maxDistnace: 10
   launchToPoint: 1
   launchType: 1
   launchSpeed: 2.54
@@ -852,12 +852,13 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.6839622, g: 1, b: 0.92645097, a: 1}
-  m_Intensity: 0
+  m_Color: {r: 0, g: 1, b: 0.60258484, a: 1}
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
+  m_LightCookieSprite: {fileID: 21300000, guid: e95ea57f56ad5c844bb8554bd8eb6aee,
+    type: 3}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
   m_OverlapOperation: 0
@@ -912,5 +913,11 @@ MonoBehaviour:
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
   - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
+  - {x: 0.2754029, y: 0.33651984, z: -2.6645353e-15}
+  - {x: 0.19635326, y: 0.3795811, z: -2.6645353e-15}
+  - {x: 0.10874469, y: 0.41724613, z: -2.6645353e-15}
+  - {x: 0.0040630787, y: 0.42565343, z: -2.6645353e-15}
+  - {x: -0.108081385, y: 0.41072935, z: -2.6645353e-15}
+  - {x: -0.27146858, y: 0.30996826, z: -2.6645353e-15}
+  - {x: -0.35518214, y: 0.18693848, z: -2.6645353e-15}
   - {x: -0.5, y: 0.5, z: 0}
