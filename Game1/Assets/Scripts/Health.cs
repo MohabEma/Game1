@@ -11,8 +11,11 @@ public class Health : MonoBehaviour
     public int numOfHearts;
     public Animator animator;
     public Image[] hearts;
+    public Image icon;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public Sprite goodIcon;
+    public Sprite lowIcon;
 
     [SerializeField] private Transform Player;
 
@@ -29,6 +32,21 @@ public class Health : MonoBehaviour
             StartCoroutine(Deathe());
 
         
+        }
+
+        if (health == 3)
+        {
+            icon.sprite = goodIcon;
+        }
+
+        if (health == 2)
+        {
+            icon.sprite = goodIcon;
+        }
+
+        if (health == 1)
+        {
+            icon.sprite = lowIcon;
         }
 
         if (Input.GetKeyDown(KeyCode.K))
@@ -81,6 +99,14 @@ public class Health : MonoBehaviour
 
 
 
+    }
+
+    public void OnTriggerEnter2D(Collider2D Player)
+    {
+        if ((Player.CompareTag("Enemy")))
+        {
+            health = health - 1;
+        }
     }
 
 }

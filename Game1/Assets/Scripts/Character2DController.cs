@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using XInputDotNetPure;
 
 public class Character2DController : MonoBehaviour
 {
@@ -11,11 +12,14 @@ public class Character2DController : MonoBehaviour
     bool facingRight = true;
     private Rigidbody2D _rigidbody;
     public Collider2D boxCollider2d;
+    PlayerIndex playerIndex;
+    GamePadState state;
+    GamePadState prevState;
 
     //EXT Features
     [Header("Graphical Settings")]
     public Animator animator;
-    public AudioSource jumpAudio;
+    public ParticleSystem dust;
 
 
     private void Start()
@@ -33,7 +37,6 @@ public class Character2DController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
         {
             _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-            jumpAudio.Play();
             
         }
 
@@ -44,6 +47,24 @@ public class Character2DController : MonoBehaviour
         else if (movement > 0 && !facingRight)
         {
             flip();
+        }
+
+        if (movement < 0)
+        {
+            GamePad.SetVibration(playerIndex, 0.015f, 0.015f);
+        }
+        else if (movement > 0)
+        {
+            GamePad.SetVibration(playerIndex, 0.015f, 0.015f);
+        }
+        else
+        {
+            GamePad.SetVibration(playerIndex, 0f, 0f);
+        }
+
+        if (Mathf.Abs(_rigidbody.velocity.y) > 0.001f)
+        {
+            GamePad.SetVibration(playerIndex, 0f, 0f);
         }
 
         if (Input.GetButton("Sprint"))
@@ -69,6 +90,12 @@ public class Character2DController : MonoBehaviour
     {
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
+        dustEffect();
+    }
+    
+    public void dustEffect()
+    {
+        dust.Play();
     }
 }
     

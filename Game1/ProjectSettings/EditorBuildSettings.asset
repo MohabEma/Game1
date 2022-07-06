@@ -51,7 +51,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter 5/Final Battle.unity
     guid: d981a1dbadeab8949bb85c78ea75166c
   - enabled: 1
-    path: Assets/Scenes/Chapter 5/Credits.unity
+    path: Assets/Scenes/Ext/Credits.unity
     guid: 1a9c3928171dd2f45aa333476534c698
   - enabled: 1
     path: Assets/Scenes/DLC - Ch 6/Chapter 6.unity
