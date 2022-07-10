@@ -30,8 +30,6 @@ public class Health : MonoBehaviour
         if(health == 0)
         {
             StartCoroutine(Deathe());
-
-        
         }
 
         if (health == 3)
@@ -84,7 +82,7 @@ public class Health : MonoBehaviour
         rb.isKinematic = true;
         animator.SetBool("Death", true);
         
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(3f);
         rb.isKinematic = false;
         health = health + 3;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -92,21 +90,21 @@ public class Health : MonoBehaviour
 
 
         animator.SetBool("Death", false);
-
-       
-
-
-
-
-
     }
 
     public void OnTriggerEnter2D(Collider2D Player)
     {
         if ((Player.CompareTag("Enemy")))
         {
+            animator.SetBool("Damage", true);
             health = health - 1;
+            StartCoroutine(oof());
         }
     }
 
+    IEnumerator oof()
+    {
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("Damage", false);
+    }
 }

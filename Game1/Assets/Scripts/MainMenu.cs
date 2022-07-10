@@ -13,15 +13,15 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI versionNum;
     [Header("Scene Direct")]
     public string sceneStart;
+    public string sceneContinue;
     public string sceneDebug;
     public string sceneCredits;
     public string sceneClicker;
+    public string sceneEditor;
     [Header("Menu Settings")]
     public GameObject mainMenu;
     public GameObject optionsMenu;
-    public GameObject extraMenu;
-    public GameObject conceptArt;
-    public GameObject musicMenu;
+    public GameObject restartMenu;
 
     void Awake()
     {
@@ -39,48 +39,26 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(false);
     }
 
+    public void contin()
+    {
+        SceneManager.LoadScene(sceneContinue);
+    }
+
     public void debug()
     {
         SceneManager.LoadScene(sceneDebug);
-    }
-
-    public void extra()
-    {
-        extraMenu.SetActive(true);
-        mainMenu.SetActive(false);
     }
 
     public void backtomain()
     {
         mainMenu.SetActive(true);
         optionsMenu.SetActive(false);
-        extraMenu.SetActive(false);
-        conceptArt.SetActive(false);
-        musicMenu.SetActive(false);
-    }
-
-    public void concept()
-    {
-        conceptArt.SetActive(true);
-        extraMenu.SetActive(false);
-    }
-
-    public void music()
-    {
-        musicMenu.SetActive(true);
-        extraMenu.SetActive(false);
+        restartMenu.SetActive(false);
     }
 
     public void credit()
     {
         SceneManager.LoadScene(sceneCredits);
-    }
-
-    public void back()
-    {
-        extraMenu.SetActive(true);
-        conceptArt.SetActive(false);
-        musicMenu.SetActive(false);
     }
 
     void Update()
@@ -91,5 +69,10 @@ public class MainMenu : MonoBehaviour
     public void clicker()
     {
         SceneManager.LoadScene(sceneClicker);
+    }
+
+    public void editor()
+    {
+        SceneManager.LoadScene(sceneEditor);
     }
 }

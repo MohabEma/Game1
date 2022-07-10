@@ -78,16 +78,6 @@ public class KazControl : MonoBehaviour
             MovementSpeed = 3;
             animator.SetBool("Run", false);
         }
-
-        if (Input.GetKey(KeyCode.Tab))
-        {
-            //Controls Menu Cut
-        }
-        else
-        {
-            //Menu Cut, New Training Has Made This Not Needed
-        }
-
     }
     void flip()
     {

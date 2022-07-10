@@ -114,7 +114,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!231 &2913930137839794690
 SpringJoint2D:
@@ -739,6 +739,7 @@ MonoBehaviour:
   gunHolder: {fileID: 2913930137839794703}
   gunPivot: {fileID: 2913930138766484216}
   firePoint: {fileID: 2913930138238011837}
+  SR: {fileID: 2913930139570509573}
   m_springJoint2D: {fileID: 2913930137839794690}
   m_rigidbody: {fileID: 2913930137839794701}
   rotateOverTime: 1
