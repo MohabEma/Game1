@@ -79,26 +79,20 @@ public class Health : MonoBehaviour
 
     IEnumerator Deathe()
     {
-        rb.isKinematic = true;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetBool("Death", true);
-        
         yield return new WaitForSeconds(3f);
-        rb.isKinematic = false;
         health = health + 3;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-
-
-        animator.SetBool("Death", false);
     }
 
     public void OnTriggerEnter2D(Collider2D Player)
     {
         if ((Player.CompareTag("Enemy")))
         {
-            animator.SetBool("Damage", true);
             health = health - 1;
             StartCoroutine(oof());
+            animator.SetBool("Damage", true);
         }
     }
 

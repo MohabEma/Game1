@@ -24,29 +24,125 @@ EditorBuildSettings:
     path: Assets/Scenes/Ext/Chapter Select.unity
     guid: b11ccff47f7202f44841f0517d8e873a
   - enabled: 1
-    path: Assets/Scenes/Chapter 1/OpenCutscene.unity
+    path: Assets/Scenes/Ext/OpenCutscene.unity
     guid: e564e12f94e3cc84282586fa0f1b7768
   - enabled: 1
     path: Assets/Scenes/Chapter 1/PreChapter1.unity
     guid: ba4fdab89761ab5439ec4ce44eab5758
   - enabled: 1
-    path: Assets/Scenes/Chapter 1/Chapter 1.unity
+    path: Assets/Scenes/Chapter 1/LostSpiritCave.unity
     guid: 8b7ae37402b6b1d499299772c9303541
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/UnderCity.unity
+    guid: c94352697a1175e4e90288d85511dbd6
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Huts/ChiefHut.unity
+    guid: d4a6bc6d3e453cc45b74f5f622c4af16
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Huts/CraftHut.unity
+    guid: bff1c445f6df3d14caf4a54e16ec87c5
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Huts/DMHut.unity
+    guid: e4165e0da511c1a4fa292461c3b93e8e
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Huts/HumHut.unity
+    guid: c7c1b90f7a0e76840a5bad29b7dd29bb
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Huts/RandHut1.unity
+    guid: ff78778d92f949a428441658ff8000ae
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Huts/RandHut2.unity
+    guid: 0a5512379fa5f4c46b36e6024119d9c1
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Huts/ToroLab.unity
+    guid: b6e5f60f56c083f4ea432c3d34ab8de8
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Huts/ViceChiefHut.unity
+    guid: 397d1afc30ec91f41a689d1d0a610e0e
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Huts/WalkerHut.unity
+    guid: b1bc2d6fac9fd1541aa16510d95429f6
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Dungeon.unity
+    guid: 243426527557aba4d8a6edf41250fb03
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/CaveGain.unity
+    guid: 3f3f7f36e0924e749a0092d59c94db16
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/Dungeon2.unity
+    guid: 09beba28861b5974e852822138905774
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1/CrystalCavern.unity
+    guid: b9dcdcd9f28f2b54ea199323278d289a
   - enabled: 1
     path: Assets/Scenes/Chapter 2/Chapter2.unity
     guid: 414af7ac30de90142aa586ee38ce2d81
   - enabled: 1
+    path: Assets/Scenes/Chapter 2/GentleWater.unity
+    guid: f389aed5c7f46764eb2885ad8fe078b6
+  - enabled: 1
+    path: Assets/Scenes/Chapter 2/OuterGates.unity
+    guid: e3c6be8dd99c3ff40a3535785ffedb44
+  - enabled: 1
+    path: Assets/Scenes/Chapter 2/RagingFire.unity
+    guid: 7da5f36229faeb147884f37c0fcb8580
+  - enabled: 1
+    path: Assets/Scenes/Chapter 2/RoughEarth.unity
+    guid: 4800f166bb6fc5341a5302154d21a6ad
+  - enabled: 1
     path: Assets/Scenes/Chapter 3/Chapter3Part1.unity
     guid: 3ec2462a7dc77414682c0e0356a18443
   - enabled: 1
-    path: Assets/Scenes/Chapter 3/Chapter3Part2.unity
-    guid: 99d94dd92652f5d4682dd7ced306b87c
+    path: Assets/Scenes/Chapter 3/CliffOfAybss.unity
+    guid: f3912f4c81c760e4c87c3c66ebbe7ac8
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3/Forest.unity
+    guid: 58e2788fa75c00046befa66b8429ddb7
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3/UndesiredLand.unity
+    guid: 47e31498db73de941aa7e44b6d842bd9
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3/VillageVision.unity
+    guid: 2a51133a84c33fd4196f99c267aff23f
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3/Houses/BobHouse.unity
+    guid: 626177d0ddfe3ff45a553b232747e142
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3/Houses/HumHouse.unity
+    guid: 4118d7dd4ed2ce749a66c550dcb9de7b
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3/Houses/MayorHouse.unity
+    guid: 17ebc72ed92e38c4da5e2c37aeb7bc15
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3/Houses/SpiritHouse.unity
+    guid: e850658821eaaf8459fb64fa9d0c8e74
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3/Houses/ZazHouse.unity
+    guid: 1cdd40df78159b741a03fdc504851b10
   - enabled: 1
     path: Assets/Scenes/Chapter 4/Chapter4.unity
     guid: 29e1d022f048e8b49b36245bb1945f5a
   - enabled: 1
+    path: Assets/Scenes/Chapter 4/Revenge.unity
+    guid: c01f96a101eec3b48b9e692a3deaf587
+  - enabled: 1
+    path: Assets/Scenes/Chapter 4/SearchPurpose.unity
+    guid: 729a05b1fe0360445b7094a83fece22e
+  - enabled: 1
+    path: Assets/Scenes/Chapter 4/TimeArsh.unity
+    guid: acd8a9b376b7e54429e082e027ed807a
+  - enabled: 1
+    path: Assets/Scenes/Chapter 4/VillageBurn.unity
+    guid: 4501c1bf7205f4046bcf56dde81616d9
+  - enabled: 1
     path: Assets/Scenes/Chapter 5/Chapter5.unity
     guid: fe3568a933c2da24597bb8d1161c4c0b
+  - enabled: 1
+    path: Assets/Scenes/Chapter 5/Aybss.unity
+    guid: edbf6456200c10540af1cd5321ae05c3
+  - enabled: 1
+    path: Assets/Scenes/Chapter 5/WhitePlain2.unity
+    guid: 21e279c9d6971b74bb833e00b7d28a2c
   - enabled: 1
     path: Assets/Scenes/Chapter 5/Final Battle.unity
     guid: d981a1dbadeab8949bb85c78ea75166c
@@ -54,6 +150,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Ext/Credits.unity
     guid: 1a9c3928171dd2f45aa333476534c698
   - enabled: 1
-    path: Assets/Scenes/DLC - Ch 6/Chapter 6.unity
+    path: Assets/Scenes/DLC - C0/Chapter 0.unity
     guid: 95397f001f959b245b6c9101b9b3fda5
+  - enabled: 1
+    path: Assets/Scenes/DLC - C0/Cave.unity
+    guid: fa3ead49eef3fa547b2e6f1810f98fe8
+  - enabled: 1
+    path: Assets/Scenes/DLC - C0/Village Ruins.unity
+    guid: 04f21ce505b8f094e9c38726344ed97c
+  - enabled: 1
+    path: Assets/Scenes/DLC - C0/Temple.unity
+    guid: 80a195486c7b5a441ab60898201828fa
   m_configObjects: {}
